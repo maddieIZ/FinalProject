@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	
+	<html lang="en">
+	<head>
+	  <meta charset="UTF-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	  <title>Stock Exchange</title>
+	  <link rel="icon" href="{{ url_for('static', filename='icon.png') }}" />
+	  <!-- Bootstrap CSS -->
+	  <link
+		rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+		crossorigin="anonymous"
+	  />
+  
+	  <!-- Personal CSS -->
+	  <link
+		rel="stylesheet"
+		href="{{ url_for('static', filename='main.css') }}"
+	  />
+	  <style>
+		body {
+			background: url("{{ url_for('static', filename='background.svg') }}")
+              /* no-repeat top 20% left 0px; */
+		  /* background-image: url("backgroun2.svg") */
+		  /* background-color: #00e1ff */
+		  			/* no-repeat top 20% left 0px; */
+		}
+	  </style>
+	</head>
+
+<body>
+
+<div class="wrapper">
+
+	
+	
+	<div class="container">
+		<div class="box" id="earthquakes-box">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="title">Data Collection and Cleaning</h3>
+					<!-- <div id="21822d85-c13e-4df5-9f92-6a735ac42ddb" class="eb-map plotly-graph-div"> -->
+						<p class="category a"> on this picture you can see the format of raw data that we had, for having data in one sheet to be able to use for plots and prediction we had to clean our data , so we export 
+							the raw data to Postgresql database , we created saprate tables foe each company the we create view to have data quartly, third step 
+							was to create view for having average price quartly.
+							you can see the picture of BP data , table and views as sample.
+						</p>
+			<!--------------------Reference---------------------->				
+						<p class="a1">Source data : 
+						<br>
+								For having access to share historical data for each company click <a href="https://finance.yahoo.com/" id="link-text">here</a>.	
+						</p>
+						<img id="img3" src="{{ user_image }}" alt="share raw price" align="center">
+					</div>
+				
+				<hr id="sizing-hr">
+
+	<!--------------------EBOLA Table---------------------->
+				<!-- <div class="col-lg-12">
+				<br>
+				<br>
+					<div class="comp-title">creating views for retrieving data quartly  
+					</div>
+					
+					<hr class="after-title">
+						<p class="category a">The following picture displays our qurey for creating view to have data quartly.
+							
+						</p>
+						<p class="a1">Source data : 
+							<br>
+									For downloading the source data please click <a href="Data/Project Source Data.csv" target="_blank">here</a>.	
+							</p>
+					
+						<img id="img4" src="images/BP  Share Price quartly.png" alt="total-number" align="center">
+							<br>
+							<br>
+							<br>
+						</div>
+						<br>
+						<br>
+					</div>
+					<br>
+				</div> -->
+
+				<!--------------------EBOLA Table---------------------->
+				<!-- <div class="col-lg-12">
+					<br>
+					<br>
+						<div class="comp-title">creating views for retrieving average data quartly  
+						</div>
+						
+						<hr class="after-title">
+							<p class="category a">The following picture displays our qurey for creating view to have the average of data quartly.
+								  
+								
+							</p>
+							<p class="a1">Source data : 
+							
+								<br>
+										For downloading the source data please click <a href="Data/Project Source Data.csv" target="_blank">here</a>.	
+								</p>
+							
+							<img id="img4" src="images/BP Avg Share Price quartly.png" alt="total-number" align="center">
+								<br>
+								<br>
+								<br>
+							</div>
+							<br>
+							<br>
+						</div>
+						<br>
+					</div> -->
+	
+	<!--------------------EBOLA Table TOTAL---------------------->				
+	<div class="col-lg-12"> 
+
+					<br>
+					
+					<div class="col-lg-12">
+					
+					<hr class="after-title">
+					 
+					<h6>References: <br>
+						historical share price data from https://finance.yahoo.com/ 
+						<br>
+				        Financila data Retrieved from https://fred.stlouisfed.org/ 
+						<br>
+						Brent price data Retrieved from https://www.eia.gov/dnav/pet/hist/rbrteD.htm <br>
+					  </h6>
+					<br>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+		<br>
+		<br> 
+</body>
+</html>

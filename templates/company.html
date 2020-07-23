@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title"></title>
+    <link rel="icon" id="icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- Personal CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main.css') }}"
+    />
+    <!-- Company Page CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='Company.css') }}"
+    />
+
+    <style>
+      body {
+        background: url("{{ url_for('static', filename='backgroun2.svg') }}") no-repeat top 20% left 0px;
+      }
+    </style>
+  </head>
+  <body class="parent">
+    <div id="main" class="parent main column">
+      <div
+        id="search-bar-container"
+        class="parent box search-bar-container shadow-lg"
+      >
+        <!-- Search form -->
+        <div class="parent form">
+          <input type="text" placeholder="Search stocks" id="search" />
+          <button id="button"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <div
+        id="results-container"
+        class="parent box results-container container shadow-lg"
+      >
+        <div id="results" class="parent column">
+          <div class="row-1 parent">
+            <div class="empty-left"></div>
+            <div id="img" class="parent"></div>
+            <h1 id="name"></h1>
+          </div>
+          <div class="row-2 parent">
+            <div class="empty-left"></div>
+            <h4 id="price"></h4>
+          </div>
+          <div class="row-3 parent">
+            <div class="empty-left"></div>
+            <h6 id="about"></h6>
+            <div class="empty-right"></div>
+          </div>
+          <div class="row-4 parent row">
+            <div class="empty-left"></div>
+            <div id="spinner" class="hide spinner-grow text-muted"></div>
+            <div id="chartContainer" class="col-9">
+              <canvas id="myChart"> </canvas>
+            </div>
+            <div class="buttons-container parent column">
+              <button id="btn1" class="shadow-sm btn-container parent">
+                5 Years
+              </button>
+              <button id="btn2" class="shadow-sm btn-container parent">
+                1 Year
+              </button>
+              <button id="btn3" class="shadow-sm btn-container parent">
+                3 Months
+              </button>
+              <button id="btn4" class="shadow-sm btn-container parent">
+                1 Month
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/84f7bf6831.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Chart JS -->
+    <!-- <script src="{{ url_for('static', filename='node_modules/chart.js/dist/Chart.js') }}"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <!-- Shared JS -->
+    <script src="{{ url_for('static', filename='shared.js') }}"></script>
+
+    <script>
+      var ticker = "{{ ticker }}";
+    </script>
+
+    <!-- Personal JS -->
+    <script src="{{ url_for('static', filename='company.js') }}"></script>
+
+ 
+  </body>
+</html>
